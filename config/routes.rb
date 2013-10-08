@@ -6,5 +6,5 @@ Blog::Application.routes.draw do
     resources :comments
   end
 
-  root to: "welcome#index"
+  root to: "posts#index"
 end

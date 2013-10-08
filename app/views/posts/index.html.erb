@@ -66,20 +66,27 @@
           </header>
 
           <footer class="post-info">
-            <abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
-              10th October 2005
+            <abbr class="published" title=<%= post.created_at %>><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+              <%= post.created_at.to_formatted_s(:short) %>
             </abbr>
 
+
             <address class="vcard author">
-              By <a class="url fn" href="#">t0pth4t</a>
+              By <a class="url fn" href="#"><%if(post.user_id) %>
+                                                <%=User.find(post.user_id).email%>
+                                            <% end %></a>
 
             </address>
           </footer><!-- /.post-info -->
 
           <div class="entry-content">
             <%= post.text %>
-            <%= link_to 'Edit', edit_post_path(post) %>     |
-            <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
+            <% if can? :edit, post %>
+                <%= link_to 'Edit', edit_post_path(post) %>   |
+            <% end %>
+            <% if can? :destroy, post %>
+                <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
+            <% end %>
           </div><!-- /.entry-content -->
         </article></li>
         <%end%>
@@ -123,7 +130,8 @@
     </footer><!-- /#contentinfo -->
 
 
-<%= link_to 'New post', new_post_path %>
+        <%= link_to 'New post', new_post_path %>
+
     <div style="display:none">
       <table>
         <tr>

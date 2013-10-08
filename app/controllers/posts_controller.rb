@@ -13,18 +13,21 @@ class PostsController < ApplicationController
   end
 
   def create
-     @post = Post.new(post_params)
 
-   if @post.save
-    redirect_to @post
-   else
-     render 'new'
-   end
+    if(signed_in?)
+     @post = current_user.posts.create(post_params)
+      if @post.save
+          redirect_to @post
+        else
+          render 'new'
+      end
+    end
 
   end
 
   def edit
     @post = Post.find(params[:id])
+    authorize! :edit, @post
   end
 
   def update
