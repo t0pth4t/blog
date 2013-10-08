@@ -6,7 +6,10 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  <% if can? :create, @users %>
+  <div><%= f.label :role %><br />
+  <%= f.collection_select :role, User::ROLES, :to_s, :humanize %></div>
+  <% end %>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>

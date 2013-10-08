@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+load_and_authorize_resource
   def index
     @posts = Post.all
   end
@@ -27,7 +27,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    authorize! :edit, @post
   end
 
   def update

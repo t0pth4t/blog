@@ -17,40 +17,20 @@
 
 <body id="index" class="home">
 
-    <header id="banner" class="body">
-      <h1><a href="#">Dat music doe.<br><strong>We really out here</strong></a> </h1>
-
-      <nav>
-        <ul>
-          <li class="active"><a href="#">home</a></li>
-          <li><a href="#">categories</a></li>
-
-          <li><a href="#">featured</a> </li>
-          <li><a href="#">contact</a></li>
-
-        </ul>
-      </nav>
-      <% if user_signed_in? %>
-          <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-      <% end %>
-    </header>  <!--/#banner -->
+<%= render 'header' %>
 
 
 
     <aside id="featured" class="body">
       <article>
         <figure>
-          <%= image_tag("shamelesstheft.png", :alt => "rss feed") %>
+          <%= image_tag("shamelesstheft2.png", :alt => "rss feed") %>
         </figure>
 
         <hgroup>
 
           <h2>Upcoming releases</h2>
-          <h3><a href="#">September releases</a></h3>
+          <h3><a href="#">October releases</a></h3>
         </hgroup>
 
       </article>
@@ -87,10 +67,13 @@
             <% if can? :destroy, post %>
                 <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
+            <div class="social"></div>
           </div><!-- /.entry-content -->
         </article></li>
         <%end%>
-        <div style="text-align: right"><%= link_to 'New post', new_post_path %>        </div>
+        <% if can? :create, @posts %>
+         <div style="text-align: right"><%= link_to 'New post', new_post_path %>        </div>
+        <%end%>
       </ol><!-- /#posts-list -->
 
     </section><!-- /#content -->
@@ -128,9 +111,6 @@
       </address><!-- /#about -->
       <p>2013 <a href="http://reddit.com">Dat music doe.</a></p>
     </footer><!-- /#contentinfo -->
-
-
-        <%= link_to 'New post', new_post_path %>
 
     <div style="display:none">
       <table>

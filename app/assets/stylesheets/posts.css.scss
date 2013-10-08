@@ -1,3 +1,61 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+	Show post
+*****************/
+#display-article {
+  background: #fff;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 20px;
+  width: 760px;
+
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#display-article figure {
+  border: 2px solid #eee;
+  float: right;
+  margin: 0.786em 2em 0 5em;
+  width: 248px;
+}
+#display-article figure img {display: block; float: right;}
+
+#display-article h2 {color: #FF8700; font-size: 1.714em; margin-bottom: 0.333em;}
+#display-article h3 {font-size: 1.429em; margin-bottom: .5em;}
+
+#display-article h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
+#display-article h3 a:hover, #featured h3 a:active {color: #fff;}
+
+/*
+	Comments
+*****************/
+#comments {
+  background: #fff;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 20px;
+  width: 760px;
+
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#comments figure {
+  border: 2px solid #eee;
+  float: right;
+  margin: 0.786em 2em 0 5em;
+  width: 248px;
+}
+#comments figure img {display: block; float: right;}
+
+#comments h2 {color: #FF8700; font-size: 1.714em; margin-bottom: 0.333em;}
+#comments h3 {font-size: 1.429em; margin-bottom: .5em;}
+
+#comments h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
+#comments h3 a:hover, #featured h3 a:active {color: #fff;}
