@@ -1,32 +1,38 @@
-<%= render 'header' %>
-
-<article id="display-article" class="body">
-          <hgroup>
 
 
-    <h2><%= @post.title %></h2>
+<div class="well">
+
+<h2><%= @post.title %></h2>
 
 
-  <p>
+  <p class="lead">
     <%= @post.text %>      <br />
-    <%= link_to 'Back', posts_path, :class => "button" %>
-    <% if can? :edit, @posts %>
-    | <%= link_to 'Edit', edit_post_path(@post), :class => "button" %>
-    <% end %>
+    <div>
+      <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
+      <% if can? :edit, @posts %>
+          | <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-inverse" %>
+      <% end %>
+    </div>
+
   </p>
-          </hgroup>
-</article>
+
+</div>
 
 
- <article id="comments" class="body">
+ <div class="well">
    <h2>Comments</h2>
    <%= render @post.comments %>
 
-   <h2>Add a comment:</h2>
-   <%= render "comments/form" %>
+   <button type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#comments-form">
+     Add a comment
+   </button>
+  <div id="comments-form" class="collapse" style="padding-top: 10px">
+    <%= render "comments/form" %>
+  </div>
 
 
 
 
- </article>
+
+ </div>
 
