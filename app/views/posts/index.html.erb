@@ -21,7 +21,7 @@
                     <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
                   </header>
 
-                  <footer class="post-info">
+                  <div class="post-info">
                     <abbr class="published" title=<%= post.created_at %>><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
                       <%= post.created_at.to_formatted_s(:short) %>
                     </abbr>
@@ -33,7 +33,7 @@
                                                     <% end %></a>
 
                     </address>
-                  </footer><!-- /.post-info -->
+                  </div><!-- /.post-info -->
 
                    <div class="entry-content">
                        <p class="lead"><%= post.text %></p>

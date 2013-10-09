@@ -10,7 +10,10 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+
+<div class="wrapper">
 <div class="container">
 
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -21,21 +24,41 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">Dat music doe.</a>
+        <%= link_to "Dat music doe.", posts_path, :class=>"brand" %>
         <div class="nav-collapse">
           <ul class="nav">
             <li><%= link_to "Home", posts_path %></li>
-            <li><%= link_to "Categories" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Trap</a></li>
+                <li><a href="#">Acid</a></li>
+                <li><a href="#">House</a></li>
+                <li><a href="#">Smooth</a></li>
+              </ul>
+            </li>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
             <li><%= link_to "Contact Us" %></li>
           </ul>
+
           <% if user_signed_in? %>
 
               <p class="navbar-text pull-right"> <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %> |
                 <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>     </p>
           <% else %>
               <p class="navbar-text pull-right">
-                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>      </p>
+
+
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <%= form_for("user", :url => user_session_path) do |f| %>
+                      <%= f.text_field :email ,:placeholder =>"Email"%>
+                      <%= f.password_field :password, :placeholder =>"Password" %>
+                      <%= f.submit 'Sign in',:class=>"btn btn-primary" %>
+                  <% end %>
+                </div>
+
+              </form>
           <% end %>
         </div>
       </div>
@@ -79,10 +102,11 @@
       </section><!-- /#extras -->
     </div>
   </div>
-
+  <div class="push"></div>
+  </div>
 
 </div>
-<div id="footer">
+<footer>
   <div class="container">
     <p class="muted credit">      <address >
 		<span >
@@ -97,6 +121,6 @@
   </address><!-- /#about -->
     <p>2013 <a href="http://reddit.com">Dat music doe.</a></p></p>
   </div>
-</div>
+</footer>
 </body>
 </html>
