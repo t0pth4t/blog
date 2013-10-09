@@ -46,19 +46,20 @@
               <p class="navbar-text pull-right"> <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %> |
                 <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>     </p>
           <% else %>
-              <p class="navbar-text pull-right">
 
 
-              <form class="navbar-form navbar-left" role="search">
+
+
+              <div class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                  <%= form_for("user", :url => user_session_path) do |f| %>
+                  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
                       <%= f.text_field :email ,:placeholder =>"Email"%>
                       <%= f.password_field :password, :placeholder =>"Password" %>
                       <%= f.submit 'Sign in',:class=>"btn btn-primary" %>
                   <% end %>
                 </div>
 
-              </form>
+              </div>
           <% end %>
         </div>
       </div>
