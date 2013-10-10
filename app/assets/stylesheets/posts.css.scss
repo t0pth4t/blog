@@ -1,3 +1,46 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#main {
+  //float: left;
+  //width: 545px;
+  //padding: 0; margin: 0;
+  //display: inline;
+}
+#main h2 {
+  padding-bottom: 3px;
+  margin-top: 15px;
+  font: normal 3.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+  color: #070707;
+  letter-spacing: -2px;
+  text-transform: none;
+}
+#main h2 a {
+  color: #070707;
+  text-decoration: none;
+  border: none;
+}
+#main ul li {
+  list-style-image: url(bullet.gif);
+}
+
+.postmeta {
+  padding: 7px 5px; margin: 20px 10px 15px 10px;
+  font-size: 1em;
+  color: #545454;
+
+  text-align: right;
+}
+
+.post-content{
+  padding-top: 20px;
+}
+
+.postmeta a.readmore { margin: 0 10px 0 5px;	}
+
+
+.post-info { font-size: .95em; padding-top: 3px; margin-left: 5px; color: #444;	}
+.post-info a { color: #BD4200; }

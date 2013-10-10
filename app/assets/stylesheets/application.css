@@ -40,3 +40,23 @@ footer a:hover {
 .wrapper > .container {
     padding-top: 60px;
 }
+
+#logo h1, #logo p {
+    float: left;
+
+}
+#logo h1 {
+    height: 88px;
+    padding: 20px 90px 0 0;
+    font-size: 4em;
+}
+
+#logo p {
+    margin: 0 0 0 -80px;
+    padding: 55px 0 0 0;
+    line-height: normal;
+    letter-spacing: -1px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666;
+}

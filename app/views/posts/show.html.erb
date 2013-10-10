@@ -1,16 +1,24 @@
 
 
-<div class="well">
+<div class="well post-body" id="main">
+
 
 <h2><%= @post.title %></h2>
+  <div class="post-info">
+    <%= @post.created_at.to_formatted_s(:short) %>
+    By <a class="url fn" href="#"><%if(@post.user_id) %>
+        <%=User.find(@post.user_id).email%>
+    <% end %></a>
 
 
-  <p class="lead">
-    <%= @post.text %>      <br />
-    <div>
+  </div><!-- /.post-info -->
+
+  <p class="lead post-content">
+    <%= @post.text %>
+    <div class="btn-group">
       <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
       <% if can? :edit, @posts %>
-          | <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-inverse" %>
+           <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-inverse" %>
       <% end %>
     </div>
 

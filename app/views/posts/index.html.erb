@@ -12,47 +12,41 @@
 
 
         <% @posts.each do |post| %>
-    <div class="well" >
-          <section id="content" class="posts-body">
+    <div class="well post-body" id="main">
 
 
-              <article class="post">
                   <header>
                     <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
                   </header>
 
                   <div class="post-info">
-                    <abbr class="published" title=<%= post.created_at %>><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
                       <%= post.created_at.to_formatted_s(:short) %>
-                    </abbr>
-
-
-                    <address class="vcard author">
                       By <a class="url fn" href="#"><%if(post.user_id) %>
                                                         <%=User.find(post.user_id).email%>
                                                     <% end %></a>
 
-                    </address>
+
                   </div><!-- /.post-info -->
 
-                   <div class="entry-content">
+                   <div class="post-content">
                        <p class="lead"><%= post.text %></p>
-                        <% if can? :edit, post %>
-                            <%= link_to 'Edit', edit_post_path(post) %>   |
-                        <% end %>
-                        <% if can? :destroy, post %>
-                            <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
-                        <% end %>
                    </div>
-              </article>
+
 
             <!-- /.entry-content -->
+                <div class=" btn-group">
+                  <% if can? :create, @posts %>
+                      <%= link_to 'New post', new_post_path,:class=>"btn btn-primary" %>
+                  <%end%>
+            <% if can? :edit, post %>
+                <%= link_to 'Edit', edit_post_path(post), :class=>"btn btn-success" %>
+            <% end %>
+            <% if can? :destroy, post %>
+                <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'},:class=>"btn btn-danger" %>
+            <% end %>
 
+                </div>
 
-            <% if can? :create, @posts %>
-                <div style="text-align: right"><%= link_to 'New post', new_post_path %>        </div>
-            <%end%>
-        </section>
     </div>
     <%end%>
 
