@@ -32,7 +32,7 @@ load_and_authorize_resource
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(post_params)
+    if @post.update_attributes(post_params)
       redirect_to @post
     else
       render 'edit'
