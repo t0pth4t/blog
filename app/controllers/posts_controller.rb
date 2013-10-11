@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 load_and_authorize_resource
   def index
-    @posts = Post.all
+    @posts = Post.paginate(:page=>params[:page], :per_page =>5)
   end
 
   def new
