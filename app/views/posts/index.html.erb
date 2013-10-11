@@ -27,9 +27,6 @@
         </div>
 
         <div class=" btn-group">
-            <% if can? :create, @posts %>
-                 <%= link_to 'New post', new_post_path,:class=>"btn btn-primary" %>
-            <%end%>
             <% if can? :edit, post %>
                 <%= link_to 'Edit', edit_post_path(post), :class=>"btn btn-success" %>
             <% end %>
