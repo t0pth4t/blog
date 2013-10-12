@@ -1,5 +1,6 @@
 <div class="well">
-  <%= form_for @post do |f| %>
+
+  <%= semantic_form_for @post do |f| %>
       <% if @post.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@post.errors.count, "error") %> prohibited
@@ -11,18 +12,14 @@
             </ul>
           </div>
       <% end %>
+      <%= f.inputs do %>
+        <%= f.input :title %>
+        <%= f.input :text, :as =>:rich %>
+      <% end %>
       <p>
-        <%= f.label :title %><br>
-        <%= f.text_field :title %>
-      </p>
-
-      <p>
-        <%= f.label :text %><br>
-        <%= f.text_area :text %>
-      </p>
-
-      <p>
-        <%= f.submit %>
+        <%= f.submit :class => "btn btn-success" %>
       </p>
   <% end %>
+
+
 </div>

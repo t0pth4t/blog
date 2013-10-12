@@ -32,6 +32,10 @@ gem 'cancan'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'rails_admin'
+gem 'rich'
+gem 'formtastic'
+gem 'formtastic-bootstrap'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

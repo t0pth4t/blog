@@ -23,7 +23,7 @@
         </div><!-- /.post-info -->
               <%= image_tag("http://i.imgur.com/z7fovN4.gif?1") %>
         <div class="post-content">
-            <p class="lead"><%= post.text %></p>
+            <p class="lead"><%= post.text.html_safe %></p>
         </div>
 
         <div class=" btn-group">
