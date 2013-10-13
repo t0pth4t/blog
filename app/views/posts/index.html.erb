@@ -39,7 +39,7 @@
 <%end%><!-- /#posts-list -->
  <div class="well" style="background: #666; border-color: #666; box-shadow:#666 ">
  <div style="float:right" >
-   <div>
+   <div class="pagination">
      <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
    </div>
 
