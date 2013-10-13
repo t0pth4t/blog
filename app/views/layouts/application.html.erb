@@ -17,6 +17,7 @@
         <div class="container">
 
           <div class="navbar navbar-inverse navbar-fixed-top">
+            <%= image_tag("logo.jpg", :alt => "DatMusicDoe", :id=>"logo") %>
             <div class="navbar-inner">
               <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -24,7 +25,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <%= link_to "Dat music doe.", posts_path, :class=>"brand" %>
+
                 <div class="nav-collapse">
                   <ul class="nav">
                     <li><%= link_to "Home", posts_path %></li>
@@ -74,12 +75,6 @@
           <% if alert %>
               <p class="alert alert-error"><%= alert %></p>
           <% end %>
-        </div>
-        <div class="span4">
-          <div id="logo">
-            <h1>Dat music doe. </h1>
-            <p><span>We really out here</span></p>
-          </div>
         </div>
 
 
