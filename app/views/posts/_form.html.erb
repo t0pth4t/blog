@@ -1,4 +1,4 @@
-<div class="well">
+
 
   <%= semantic_form_for @post do |f| %>
       <% if @post.errors.any? %>
@@ -16,10 +16,12 @@
         <%= f.input :title %>
         <%= f.input :text, :as =>:rich %>
       <% end %>
-      <p>
+      <div class="btn-group" style="padding-top:10px ">
+        <%= link_to 'Cancel', posts_path, :class => "btn btn-danger" %>
         <%= f.submit :class => "btn btn-success" %>
-      </p>
+      </div>
   <% end %>
 
 
-</div>
+
+

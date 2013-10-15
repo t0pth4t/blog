@@ -48,3 +48,22 @@ footer a:hover {
     float: left;
 }
 
+
+.sidebar-nav-fixed {
+    position:fixed;
+    top:300px;
+    width:15.97%;
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-fixed {
+        position:static;
+        width:auto;
+    }
+}
+
+@media (max-width: 979px) {
+    .sidebar-nav-fixed {
+        top:70px;
+    }
+}
