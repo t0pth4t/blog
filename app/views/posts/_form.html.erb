@@ -16,6 +16,9 @@
         <%= f.input :title %>
         <%= f.input :text, :as =>:rich %>
       <% end %>
+
+      <%= render 'song_fields', :f =>f  %>
+
       <div class="btn-group" style="padding-top:10px ">
         <%= link_to 'Cancel', posts_path, :class => "btn btn-danger" %>
         <%= f.submit :class => "btn btn-success" %>

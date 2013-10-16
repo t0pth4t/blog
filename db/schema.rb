@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131012155327) do
+ActiveRecord::Schema.define(:version => 20131015233732) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -60,6 +60,18 @@ ActiveRecord::Schema.define(:version => 20131012155327) do
     t.text     "uri_cache"
     t.string   "simplified_type",        :default => "file"
   end
+
+  create_table "songs", :force => true do |t|
+    t.string   "title"
+    t.string   "artist"
+    t.string   "source"
+    t.text     "description"
+    t.integer  "post_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "songs", ["post_id"], :name => "index_songs_on_post_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

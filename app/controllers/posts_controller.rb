@@ -6,6 +6,7 @@ load_and_authorize_resource
 
   def new
        @post = Post.new
+      1.times {@post.songs.build}
   end
 
   def show
@@ -48,7 +49,7 @@ load_and_authorize_resource
 
   private
     def post_params
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit!
     end
 
 end
