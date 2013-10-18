@@ -1,6 +1,6 @@
 
 
-  <%= semantic_form_for @post do |f| %>
+  <%= semantic_nested_form_for @post do |f| %>
       <% if @post.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@post.errors.count, "error") %> prohibited
@@ -14,6 +14,7 @@
       <% end %>
       <%= f.inputs do %>
         <%= f.input :title %>
+        <%= f.input :image %>
         <%= f.input :text, :as =>:rich %>
       <% end %>
 

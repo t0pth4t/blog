@@ -6,7 +6,7 @@ load_and_authorize_resource
 
   def new
        @post = Post.new
-      1.times {@post.songs.build}
+      20.times {@post.songs.build}
   end
 
   def show

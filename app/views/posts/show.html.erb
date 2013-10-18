@@ -4,15 +4,14 @@
 
 
 <h2><%= @post.title %></h2>
+
   <div class="post-info">
     <%= @post.created_at.to_formatted_s(:short) %>
     By <a class="url fn" href="#"><%if(@post.user_id) %>
         <%=User.find(@post.user_id).email%>
     <% end %></a>
-
-
   </div><!-- /.post-info -->
-
+  <%= image_tag(@post.image) %>
   <p class="lead post-content">
     <%= @post.text.html_safe %>
     <% for song in @post.songs %>
@@ -39,10 +38,6 @@
   <div id="comments-form" class="collapse" style="padding-top: 10px">
     <%= render "comments/form" %>
   </div>
-
-
-
-
 
  </div>
 
