@@ -1,102 +1,101 @@
-2013-10-14T23:33:00.508146+00:00 app[web.1]:   app/views/posts/_form.html.erb:17:in `block (2 levels) in _app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:00.508303+00:00 app[web.1]: 
-2013-10-14T23:33:00.508303+00:00 app[web.1]:   app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:00.508146+00:00 app[web.1]:     20:         <%= f.submit :class => "btn btn-success" %>
-2013-10-14T23:33:00.508146+00:00 app[web.1]:     19:       <p>
-2013-10-14T23:33:00.508146+00:00 app[web.1]:     16:         <%= f.input :title %>
-2013-10-14T23:33:00.508303+00:00 app[web.1]:   app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__577922808581148189_69956820283300'
-2013-10-14T23:33:00.508303+00:00 app[web.1]:   app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:00.508303+00:00 app[web.1]: 
-2013-10-14T23:33:00.515740+00:00 heroku[router]: at=info method=GET path=/posts/new host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=0ms service=36ms status=500 bytes=643
-2013-10-14T23:32:37.387809+00:00 heroku[router]: at=info method=GET path=/ host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=72ms service=270ms status=200 bytes=10581
-2013-10-14T23:33:11.252761+00:00 app[web.1]: Started GET "/" for 76.219.82.35 at 2013-10-14 23:33:11 +0000
-2013-10-14T23:33:11.257231+00:00 app[web.1]: Processing by PostsController#index as HTML
-2013-10-14T23:33:11.290791+00:00 app[web.1]:   Rendered posts/index.html.erb within layouts/application (22.3ms)
-2013-10-14T23:33:11.292841+00:00 app[web.1]: Completed 200 OK in 36ms (Views: 9.4ms | ActiveRecord: 17.9ms)
-2013-10-14T23:33:11.291780+00:00 heroku[router]: at=info method=GET path=/ host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=3ms service=50ms status=304 bytes=0
-2013-10-14T23:33:20.028757+00:00 app[web.1]: Started GET "/" for 76.219.82.35 at 2013-10-14 23:33:20 +0000
-2013-10-14T23:33:20.032192+00:00 app[web.1]: Processing by PostsController#index as HTML
-2013-10-14T23:33:20.059858+00:00 app[web.1]:   Rendered posts/index.html.erb within layouts/application (17.4ms)
-2013-10-14T23:33:20.111688+00:00 app[web.1]: Completed 200 OK in 79ms (Views: 58.9ms | ActiveRecord: 12.8ms)
-2013-10-14T23:33:20.113863+00:00 heroku[router]: at=info method=GET path=/ host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=3ms service=90ms status=304 bytes=0
-2013-10-14T23:33:20.639737+00:00 heroku[router]: at=info method=GET path=/assets/application-4ea499ee5bb0a22385e0818be1451a2d.js host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=11ms status=304 bytes=0
-2013-10-14T23:33:20.692667+00:00 heroku[router]: at=info method=GET path=/assets/application-cdfffc972952e61881d2d45b19cecc59.css host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=3ms service=7ms status=304 bytes=0
-2013-10-14T23:33:20.649579+00:00 heroku[router]: at=info method=GET path=/assets/logo-bd1c2d702c27c02fced13cf14adaeca3.jpg host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=1ms service=6ms status=304 bytes=0
-2013-10-14T23:33:20.793876+00:00 heroku[router]: at=info method=GET path=/assets/shamelesstheft2-b463967fb4d80f8b9141e8d2928eb6ff.png host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=7ms status=304 bytes=0
-2013-10-14T23:33:22.198598+00:00 app[web.1]: Started GET "/new" for 76.219.82.35 at 2013-10-14 23:33:22 +0000
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-2013-10-14T23:33:22.202219+00:00 app[web.1]: 
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
-2013-10-14T23:33:22.202219+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/new"):
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
-2013-10-14T23:33:22.202219+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
-2013-10-14T23:33:22.202365+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
-2013-10-14T23:33:22.202523+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
-2013-10-14T23:33:22.202523+00:00 app[web.1]: 
-2013-10-14T23:33:22.202523+00:00 app[web.1]: 
-2013-10-14T23:33:22.197220+00:00 heroku[router]: at=info method=GET path=/new host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=1ms service=10ms status=404 bytes=728
-2013-10-14T23:33:20.998779+00:00 heroku[router]: at=info method=GET path=/assets/tybg-05341efb6a51be415b24a5c74cd3dfcb.png host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=6ms status=304 bytes=0
-2013-10-14T23:33:31.819811+00:00 app[web.1]: Started GET "/posts/9/edit" for 76.219.82.35 at 2013-10-14 23:33:31 +0000
-2013-10-14T23:33:31.823550+00:00 app[web.1]:   Parameters: {"id"=>"9"}
-2013-10-14T23:33:31.823550+00:00 app[web.1]: Processing by PostsController#edit as HTML
-2013-10-14T23:33:31.849984+00:00 app[web.1]: ActionView::Template::Error (rich/editor.css isn't precompiled):
-2013-10-14T23:33:31.849984+
-00:00 app[web.1]:     16:         <%= f.input :title %>
-2013-10-14T23:33:31.847514+00:00 app[web.1]:   Rendered posts/_form.html.erb (5.8ms)
-2013-10-14T23:33:31.849984+00:00 app[web.1]:     15:       <%= f.inputs do %>
-2013-10-14T23:33:31.849984+00:00 app[web.1]:     17:         <%= f.input :text, :as =>:rich %>
-2013-10-14T23:33:31.849984+00:00 app[web.1]:     18:       <% end %>
-2013-10-14T23:33:31.847514+00:00 app[web.1]:   Rendered posts/edit.html.erb within layouts/application (6.5ms)
-2013-10-14T23:33:31.847699+00:00 app[web.1]: Completed 500 Internal Server Error in 24ms
-2013-10-14T23:33:31.849984+00:00 app[web.1]:     19:       <p>
-2013-10-14T23:33:31.849984+00:00 app[web.1]:     20:         <%= f.submit :class => "btn btn-success" %>
-2013-10-14T23:33:31.849984+00:00 app[web.1]:   app/views/posts/_form.html.erb:17:in `block (2 levels) in _app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:31.849984+00:00 app[web.1]: 
-2013-10-14T23:33:31.849984+00:00 app[web.1]:     14:       <% end %>
-2013-10-14T23:33:31.850140+00:00 app[web.1]:   app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:31.850140+00:00 app[web.1]:   app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:31.850140+00:00 app[web.1]:   app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb___3574678346008142964_69956819320980'
-2013-10-14T23:33:31.850140+00:00 app[web.1]: 
-2013-10-14T23:33:31.850140+00:00 app[web.1]: 
-2013-10-14T23:33:31.860111+00:00 heroku[router]: at=info method=GET path=/posts/9/edit host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=37ms status=500 bytes=643
-2013-10-14T23:33:33.129649+00:00 app[web.1]: Processing by PostsController#new as HTML
-2013-10-14T23:33:33.125323+00:00 app[web.1]: Started GET "/posts/new" for 76.219.82.35 at 2013-10-14 23:33:33 +0000
-2013-10-14T23:33:33.143354+00:00 app[web.1]:   Rendered posts/_form.html.erb (4.2ms)
-2013-10-14T23:33:33.143529+00:00 app[web.1]: Completed 500 Internal Server Error in 14ms
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     14:       <% end %>
-2013-10-14T23:33:33.145949+00:00 app[web.1]: 
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     15:       <%= f.inputs do %>
-2013-10-14T23:33:33.143354+00:00 app[web.1]:   Rendered posts/new.html.erb within layouts/application (4.5ms)
-2013-10-14T23:33:33.145949+00:00 app[web.1]: ActionView::Template::Error (rich/editor.css isn't precompiled):
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     17:         <%= f.input :text, :as =>:rich %>
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     18:       <% end %>
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     19:       <p>
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     16:         <%= f.input :title %>
-2013-10-14T23:33:33.145949+00:00 app[web.1]:     20:         <%= f.submit :class => "btn btn-success" %>
-2013-10-14T23:33:33.145949+00:00 app[web.1]:   app/views/posts/_form.html.erb:17:in `block (2 levels) in _app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:33.146111+00:00 app[web.1]:   app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:33.146111+00:00 app[web.1]:   app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb__1401085064553673887_69956820339100'
-2013-10-14T23:33:33.146111+00:00 app[web.1]:   app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__577922808581148189_69956820283300'
-2013-10-14T23:33:33.146111+00:00 app[web.1]: 
-2013-10-14T23:33:33.146111+00:00 app[web.1]: 
-2013-10-14T23:33:33.139419+00:00 heroku[router]: at=info method=GET path=/posts/new host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=25ms status=500 bytes=643
-2013-10-14T23:32:24.763147+00:00 heroku[router]: at=info method=GET path=/assets/application-cdfffc972952e61881d2d45b19cecc59.css host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=7ms status=304 bytes=0
+2013-10-19T18:55:37.272186+00:00 app[web.1]: [2013-10-19 18:55:37] INFO  ruby 2.0.0 (2013-06-27) [x86_64-linux]
+2013-10-19T18:55:37.272186+00:00 app[web.1]: [2013-10-19 18:55:37] INFO  WEBrick 1.3.1
+2013-10-19T18:55:37.648159+00:00 heroku[web.1]: State changed from starting to up
+2013-10-19T18:55:55.475036+00:00 app[web.1]: Started GET "/" for 76.219.82.35 at 2013-10-19 18:55:55 +0000
+2013-10-19T18:55:55.520425+00:00 app[web.1]: Processing by PostsController#index as HTML
+2013-10-19T18:55:55.687431+00:00 app[web.1]:   Rendered posts/index.html.erb within layouts/application (116.8ms)
+2013-10-19T18:55:55.687295+00:00 app[web.1]:   Rendered posts/_post.html.erb (40.6ms)
+2013-10-19T18:55:55.694722+00:00 app[web.1]: Completed 200 OK in 174ms (Views: 103.0ms | ActiveRecord: 38.6ms)
+2013-10-19T18:55:56.059310+00:00 heroku[router]: at=info method=GET path=/assets/application-5a9df8a2ca11e73190742895ab9e70cc.css host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=1ms service=74ms status=200 bytes=219862
+2013-10-19T18:55:56.088814+00:00 heroku[router]: at=info method=GET path=/assets/application-da93cee18b734e67456b01dba68933e1.js host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=103ms status=200 bytes=669367
+2013-10-19T18:56:06.949086+00:00 app[web.1]: Processing by Devise::SessionsController#create as HTML
+2013-10-19T18:56:06.949086+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"YAF4iyHgKb4eRxqvpKiDCsx9i08zXrlchrDcHl7PEQs=", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+2013-10-19T18:56:06.944982+00:00 app[web.1]: Started POST "/users/sign_in" for 76.219.82.35 at 2013-10-19 18:56:06 +0000
+2013-10-19T18:56:07.086513+00:00 app[web.1]: Redirected to http://datmusicdoe.herokuapp.com/
+2013-10-19T18:56:07.086730+00:00 app[web.1]: Completed 302 Found in 137ms (ActiveRecord: 0.0ms)
+2013-10-19T18:56:07.169367+00:00 app[web.1]: Started GET "/" for 76.219.82.35 at 2013-10-19 18:56:07 +0000
+2013-10-19T18:56:07.173854+00:00 app[web.1]: Processing by PostsController#index as HTML
+2013-10-19T18:56:07.207983+00:00 app[web.1]:   Rendered posts/index.html.erb within layouts/application (21.1ms)
+2013-10-19T18:56:07.207612+00:00 app[web.1]:   Rendered posts/_post.html.erb (17.9ms)
+2013-10-19T18:56:07.211477+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 18.6ms | ActiveRecord: 8.0ms)
+2013-10-19T18:56:07.219458+00:00 heroku[router]: at=info method=GET path=/ host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=55ms status=200 bytes=11269
+2013-10-19T18:56:07.501288+00:00 heroku[router]: at=info method=GET path=/assets/application-da93cee18b734e67456b01dba68933e1.js host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=4ms service=6ms status=304 bytes=0
+2013-10-19T18:56:07.091380+00:00 heroku[router]: at=info method=POST path=/users/sign_in host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=156ms status=302 bytes=99
+2013-10-19T18:56:09.861026+00:00 app[web.1]: Started GET "/posts/new" for 76.219.82.35 at 2013-10-19 18:56:09 +0000
+2013-10-19T18:56:09.865509+00:00 app[web.1]: Processing by PostsController#new as HTML
+2013-10-19T18:56:09.898835+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "songs" does not exist
+2013-10-19T18:56:09.896892+00:00 app[web.1]: Completed 500 Internal Server Error in 31ms
+2013-10-19T18:56:09.898835+00:00 app[web.1]:                                         ^
+2013-10-19T18:56:09.898835+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2013-10-19T18:56:09.898835+00:00 app[web.1]: LINE 5:              WHERE a.attrelid = '"songs"'::regclass
+2013-10-19T18:56:09.898835+00:00 app[web.1]:               FROM pg_attribute a LEFT JOIN pg_attrdef d
+2013-10-19T18:56:09.898835+00:00 app[web.1]: 
+2013-10-19T18:56:09.898835+00:00 app[web.1]: :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2013-10-19T18:56:09.901522+00:00 heroku[router]: at=info method=GET path=/posts/new host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=2ms service=45ms status=500 bytes=643
+2013-10-19T18:56:09.898835+00:00 app[web.1]:                AND a.attnum > 0 AND NOT a.attisdropped
+2013-10-19T18:56:09.898835+00:00 app[web.1]:                 ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2013-10-19T18:56:09.899205+00:00 app[web.1]: ):
+2013-10-19T18:56:09.899205+00:00 app[web.1]:   app/controllers/posts_controller.rb:9:in `times'
+2013-10-19T18:56:09.899205+00:00 app[web.1]:              ORDER BY a.attnum
+2013-10-19T18:56:09.898835+00:00 app[web.1]:              WHERE a.attrelid = '"songs"'::regclass
+2013-10-19T18:56:09.899205+00:00 app[web.1]:   app/controllers/posts_controller.rb:9:in `block in new'
+2013-10-19T18:56:09.899205+00:00 app[web.1]:   app/controllers/posts_controller.rb:9:in `new'
+2013-10-19T18:56:09.899205+00:00 app[web.1]: 
+2013-10-19T18:56:09.899205+00:00 app[web.1]: 
+2013-10-19T18:55:25.963388+00:00 heroku[web.1]: State changed from up to starting
+2013-10-19T18:55:55.699626+00:00 heroku[router]: at=info method=GET path=/ host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=6ms service=232ms status=200 bytes=11042
+2013-10-19T18:58:31.246960+00:00 heroku[api]: Starting process with command `bundle exec rake db:migrate` by t0pth4t@yahoo.com
+2013-10-19T18:58:39.118837+00:00 heroku[run.8504]: Awaiting client
+2013-10-19T18:58:39.201730+00:00 heroku[run.8504]: Starting process with command `bundle exec rake db:migrate`
+2013-10-19T18:58:40.237300+00:00 heroku[run.8504]: State changed from starting to up
+2013-10-19T18:58:47.220143+00:00 heroku[run.8504]: State changed from up to complete
+2013-10-19T18:58:47.212844+00:00 heroku[run.8504]: Process exited with status 0
+2013-10-19T18:58:51.725177+00:00 app[web.1]: Started GET "/posts/new" for 76.219.82.35 at 2013-10-19 18:58:51 +0000
+2013-10-19T18:58:51.729496+00:00 app[web.1]: Processing by PostsController#new as HTML
+2013-10-19T18:58:51.824594+00:00 app[web.1]:   Rendered posts/_form.html.erb (11.7ms)
+2013-10-19T18:58:51.824801+00:00 app[web.1]:   Rendered posts/new.html.erb within layouts/application (12.7ms)
+2013-10-19T18:58:51.824801+00:00 app[web.1]: Completed 500 Internal Server Error in 95ms
+2013-10-19T18:58:51.827871+00:00 app[web.1]: 
+2013-10-19T18:58:51.827871+00:00 app[web.1]: ActionView::Template::Error (undefined method `image' for #<Post:0x007fbda7a17d10>):
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     14:       <% end %>
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     17:         <%= f.input :image %>
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     20: 
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     16:         <%= f.input :title %>
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     19:       <% end %>
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     15:       <%= f.inputs do %>
+2013-10-19T18:58:51.827871+00:00 app[web.1]:     18:         <%= f.input :text, :as =>:rich %>
+2013-10-19T18:58:51.827871+00:00 app[web.1]:   app/views/posts/_form.html.erb:17:in `block (2 levels) in _app_views_posts__form_html_erb__755011328497530974_70226266507900'
+2013-10-19T18:58:51.828064+00:00 app[web.1]:   app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb__755011328497530974_70226266507900'
+2013-10-19T18:58:51.828064+00:00 app[web.1]:   app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2771005719543616668_70226265865960'
+2013-10-19T18:58:51.828064+00:00 app[web.1]: 
+2013-10-19T18:58:51.828064+00:00 app[web.1]:   app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb__755011328497530974_70226266507900'
+2013-10-19T18:58:51.828064+00:00 app[web.1]: 
+2013-10-19T18:58:51.829061+00:00 heroku[router]: at=info method=GET path=/posts/new host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=1ms service=110ms status=500 bytes=643
+2013-10-19T18:58:58.474241+00:00 app[web.1]: Started GET "/" for 76.219.82.35 at 2013-10-19 18:58:58 +0000
+2013-10-19T18:58:58.477140+00:00 app[web.1]: Processing by PostsController#index as HTML
+2013-10-19T18:58:58.504636+00:00 app[web.1]: Completed 200 OK in 27ms (Views: 12.1ms | ActiveRecord: 7.0ms)
+2013-10-19T18:58:58.502206+00:00 app[web.1]:   Rendered posts/_post.html.erb (12.5ms)
+2013-10-19T18:58:58.506057+00:00 heroku[router]: at=info method=GET path=/ host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=1ms service=37ms status=200 bytes=11197
+2013-10-19T18:58:58.502206+00:00 app[web.1]:   Rendered posts/index.html.erb within layouts/application (15.2ms)
+2013-10-19T18:58:58.705624+00:00 heroku[router]: at=info method=GET path=/assets/application-da93cee18b734e67456b01dba68933e1.js host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=1ms service=6ms status=304 bytes=0
+2013-10-19T18:59:00.990940+00:00 app[web.1]: Started GET "/posts/new" for 76.219.82.35 at 2013-10-19 18:59:00 +0000
+2013-10-19T18:59:00.994147+00:00 app[web.1]: Processing by PostsController#new as HTML
+2013-10-19T18:59:01.010050+00:00 app[web.1]:   Rendered posts/_form.html.erb (5.9ms)
+2013-10-19T18:59:01.010050+00:00 app[web.1]:   Rendered posts/new.html.erb within layouts/application (6.3ms)
+2013-10-19T18:59:01.010260+00:00 app[web.1]: Completed 500 Internal Server Error in 16ms
+2013-10-19T18:59:01.013263+00:00 app[web.1]: 
+2013-10-19T18:59:01.013263+00:00 app[web.1]: ActionView::Template::Error (undefined method `image' for #<Post:0x007fbda79a1458>):
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     14:       <% end %>
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     15:       <%= f.inputs do %>
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     19:       <% end %>
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     16:         <%= f.input :title %>
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     18:         <%= f.input :text, :as =>:rich %>
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     17:         <%= f.input :image %>
+2013-10-19T18:59:01.013436+00:00 app[web.1]:   app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb__755011328497530974_70226266507900'
+2013-10-19T18:59:01.013263+00:00 app[web.1]:     20: 
+2013-10-19T18:59:01.013436+00:00 app[web.1]:   app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb__755011328497530974_70226266507900'
+2013-10-19T18:59:01.013263+00:00 app[web.1]:   app/views/posts/_form.html.erb:17:in `block (2 levels) in _app_views_posts__form_html_erb__755011328497530974_70226266507900'
+2013-10-19T18:59:01.013436+00:00 app[web.1]:   app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2771005719543616668_70226265865960'
+2013-10-19T18:59:01.013436+00:00 app[web.1]: 
+2013-10-19T18:59:01.013436+00:00 app[web.1]: 
+2013-10-19T18:59:01.010939+00:00 heroku[router]: at=info method=GET path=/posts/new host=datmusicdoe.herokuapp.com fwd="76.219.82.35" dyno=web.1 connect=3ms service=28ms status=500 bytes=643
