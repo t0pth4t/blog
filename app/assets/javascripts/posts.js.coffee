@@ -9,3 +9,11 @@ jQuery ->
         $('.pagination').text("Loading more posts...")
         $.getScript(url)
     $(window).scroll()
+
+
+
+$(document).ready ->
+  $('video,audio').mediaelementplayer({
+
+  })
+

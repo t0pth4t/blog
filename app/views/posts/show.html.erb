@@ -11,11 +11,13 @@
         <%=User.find(@post.user_id).email%>
     <% end %></a>
   </div><!-- /.post-info -->
-  <%= image_tag(@post.image) %>
+  <%= image_tag(@post.image, :class => "post-image")%>
   <p class="lead post-content">
     <%= @post.text.html_safe %>
     <% for song in @post.songs %>
       <li><%= song.title %></li>
+        <audio id="audio-player" src="http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a" type="audio/mp3" controls="controls"></audio>
+      <audio id="audio-player" src="http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a" type="audio/mp3" controls="controls"></audio>
     <% end %>
     <div class="btn-group">
       <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
@@ -26,7 +28,6 @@
   </p>
 
 </div>
-
 
  <div class="well">
    <h2><a name="comments"></a>Comments</h2>
