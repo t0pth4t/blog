@@ -200,6 +200,7 @@ DEPENDENCIES
   formtastic
   jquery-rails
   mediaelement_rails
+  nested_form
   pg
   rails (= 3.2.13)
   rails_12factor

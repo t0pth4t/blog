@@ -26,6 +26,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'nested_form'
 gem 'strong_parameters'
 gem 'devise'
 gem 'cancan'
@@ -36,6 +37,7 @@ gem 'rails_admin'
 gem 'rich'
 gem 'formtastic'
 gem 'mediaelement_rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -13,8 +13,19 @@
         <% end %></a>
       </div><!-- /.post-info -->
 
+      <% if post.image %>
+        <%= image_tag(post.image, :class => "post-image")%>
+      <% end %>
+
       <div class="post-content">
         <p class="lead"><%= post.text.html_safe %></p>
+        <% for song in post.songs %>
+            <div class="audio-player">
+                <h4><%=song.artist%> - <%= song.title %></h4>
+              </div>
+                <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls"></audio>
+
+        <% end %>
       </div>
 
       <div class=" btn-group">

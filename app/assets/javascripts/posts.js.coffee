@@ -13,7 +13,5 @@ jQuery ->
 
 
 $(document).ready ->
-  $('video,audio').mediaelementplayer({
-
-  })
+  $('video,audio').mediaelementplayer({})
 
