@@ -62,8 +62,8 @@
 .mejs-controls .mejs-pause button {
   width: 21px;
   height: 21px;
-  top: -35px;
-  left: 170px;
+  //top: -35px;
+  //left: 170px;
   background: transparent url( 'play-pause.png') 0 0;
 }
 
@@ -71,13 +71,13 @@
 .mejs-controls div.mejs-time-rail { width: 400px; }
 
 .mejs-controls .mejs-time-rail span {
-  position: absolute;
-  display: block;
-  width: 400px;
-  height: 5px;
-  left: 0;
-  bottom: 0;
-  cursor: pointer;
+  //position: absolute;
+  //display: block;
+  //width: 400px;
+  //height: 5px;
+  //left: 0;
+  //bottom: 0;
+  //cursor: pointer;
 
   -webkit-border-radius: 0px 0px 2px 2px;
   -moz-border-radius: 0px 0px 2px 2px;

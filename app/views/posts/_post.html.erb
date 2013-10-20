@@ -22,9 +22,9 @@
 
 
         <% for song in post.songs %>
-            <div style="background-color: black; width: 200px" >
-            <h4 style="color: white"><%= song.title %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls">   </audio>
-            </div>
+
+            <h4 style="color: #000"><%=song.artist%> - <%= song.title %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls">   </audio>
+
         <% end %>
 
       </div>
