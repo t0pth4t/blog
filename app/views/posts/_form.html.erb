@@ -17,15 +17,19 @@
         <%= f.input :image %>
         <%= f.input :text, :as =>:rich %>
       <% end %>
-      <div id=songs>
-        <%= render 'song_fields', :f =>f  %>
+
+      <div id="songs">
+         <%= f.semantic_fields_for :songs do |builder| %>
+            <%= render 'song_fields', :f =>builder  %>
+         <% end %>
       </div>
       <%= f.link_to_add "Add a song", :songs, :data => { :target => "#songs" } %>
-      <div class="btn-group" style="padding-top:10px ">
+      <div class="btn-group" style="padding-top:10px; float:right ">
         <%= link_to 'Cancel', posts_path, :class => "btn btn-danger" %>
         <%= f.submit :class => "btn btn-success" %>
       </div>
   <% end %>
+
 
 
 
