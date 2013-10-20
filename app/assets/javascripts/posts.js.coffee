@@ -13,5 +13,9 @@ jQuery ->
 
 
 $(document).ready ->
-  $('video,audio').mediaelementplayer({})
+  $('video,audio').mediaelementplayer(
+    features: ['playpause','progress'],
+                  audioHeight: 120,
+    audioWidth: 30
+  )
 
