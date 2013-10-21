@@ -15,7 +15,7 @@
   <p class="lead post-content">
     <%= @post.text.html_safe %>
     <% for song in @post.songs %>
-      <li><%= song.title %></li>
+      <li><%= song.title.html_safe %></li>
         <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls"></audio>
     <% end %>
     <div class="btn-group">
