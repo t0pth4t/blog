@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55ed6fdd-e296-4d23-8c1a-2054492f29db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/play-pause-two.png" afterPath="$PROJECT_DIR$/app/assets/images/play-pause-two.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_post.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_post.html.erb" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +35,7 @@
     <file path="/a.rxml" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381889061855" ignored="false" />
     <file path="/a.coffee" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381889066765" ignored="false" />
     <file path="/_song_fields.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382232072437" ignored="false" />
-    <file path="/_post.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382400264948" ignored="false" />
+    <file path="/_post.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382405090584" ignored="false" />
     <file path="/mep-feature-playlist.css" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382235226678" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_post.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_post.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/posts/_post.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="25" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.65384614">
+            <state line="23" column="86" selection-start="641" selection-end="641" vertical-scroll-proportion="0.4483945">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -120,10 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="posts.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="posts.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="1" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.7349666">
+            <state line="88" column="1" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,9 +188,9 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/posts/_song_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/posts/_post.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/posts/_post.html.erb" />
       </list>
     </option>
   </component>
@@ -1109,17 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/_post.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="25" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="54" selection-start="5059" selection-end="5059" vertical-scroll-proportion="-17.538462">
@@ -1131,8 +1121,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="1" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.7349666">
+        <state line="88" column="1" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/_post.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="86" selection-start="641" selection-end="641" vertical-scroll-proportion="0.4483945">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
