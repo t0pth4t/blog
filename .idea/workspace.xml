@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55ed6fdd-e296-4d23-8c1a-2054492f29db" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_post.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_post.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +25,7 @@
     <file path="/20131008015406_add_user_id_to_posts.rb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381197356753" ignored="false" />
     <file path="/application_controller.rb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381199627081" ignored="false" />
     <file path="/ability.rb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381199990825" ignored="false" />
-    <file path="/posts.css.scss" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382410770044" ignored="false" />
+    <file path="/posts.css.scss" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382507657079" ignored="false" />
     <file path="/application.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382495123498" ignored="false" />
     <file path="/_form.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382232112123" ignored="false" />
     <file path="/comment.rb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381619248470" ignored="false" />
@@ -35,7 +35,7 @@
     <file path="/a.rxml" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381889061855" ignored="false" />
     <file path="/a.coffee" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1381889066765" ignored="false" />
     <file path="/_song_fields.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382232072437" ignored="false" />
-    <file path="/_post.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382505022280" ignored="false" />
+    <file path="/_post.html.erb" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382507373331" ignored="false" />
     <file path="/mep-feature-playlist.css" changelist="55ed6fdd-e296-4d23-8c1a-2054492f29db" time="1382235226678" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,11 +88,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_post.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_post.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/_post.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="15" selection-start="1604" selection-end="1650" vertical-scroll-proportion="0.8471223">
-              <folding />
+            <state line="7" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="-4.576923">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,6 +114,15 @@
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="32" selection-end="84" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="posts.css.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="82" selection-start="914" selection-end="914" vertical-scroll-proportion="0.3797251">
               <folding />
             </state>
           </provider>
@@ -165,7 +178,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/posts/_song_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/password_controller.rb" />
@@ -176,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/posts/_post.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
       </list>
     </option>
   </component>
@@ -1055,13 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="46" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="119" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
@@ -1141,7 +1147,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/_post.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="15" selection-start="1604" selection-end="1650" vertical-scroll-proportion="0.8471223">
+        <state line="7" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="-4.576923">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="82" selection-start="914" selection-end="914" vertical-scroll-proportion="0.3797251">
           <folding />
         </state>
       </provider>

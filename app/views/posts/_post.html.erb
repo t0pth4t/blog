@@ -6,10 +6,10 @@
       </header>
 
       <div class="post-info">
-        <%= post.created_at.to_formatted_s(:short) %>
+        <%= post.created_at.strftime('%A, %b %d') %>
         By <a class="url fn" href="#">
         <%if(post.user_id) %>
-            <%=User.find(post.user_id).email%>
+            <%=User.find(post.user_id).email.partition('@').first%>
         <% end %></a>
       </div><!-- /.post-info -->
 
