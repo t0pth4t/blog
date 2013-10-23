@@ -7,7 +7,13 @@ jQuery ->
       url = $('.pagination .next_page').attr('href')
       if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
         $('.pagination').text("Loading more posts...")
+        $('video,audio').mediaelementplayer(
+          features: ['playpause','progress','duration'],
+            audioHeight: 120,
+          audioWidth: 30
+        )
         $.getScript(url)
+
     $(window).scroll()
 
 
