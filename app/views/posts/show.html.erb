@@ -6,18 +6,26 @@
 <h2><%= @post.title %></h2>
 
   <div class="post-info">
-    <%= @post.created_at.to_formatted_s(:short) %>
-    By <a class="url fn" href="#"><%if(@post.user_id) %>
-        <%=User.find(@post.user_id).email%>
+    <%= @post.created_at.strftime('%A, %b %d') %>
+    By <a class="url fn" href="#">
+    <%if(@post.user_id) %>
+        <%=User.find(@post.user_id).email.partition('@').first%>
     <% end %></a>
   </div><!-- /.post-info -->
-  <%= image_tag(@post.image, :class => "post-image")%>
-  <p class="lead post-content">
-    <%= @post.text.html_safe %>
+   <% if @post.image %>
+    <%= image_tag(@post.image, :class => "post-image")%>
+   <% end %>
+  <div class="post-content">
+    <p class="lead"><%= @post.text.html_safe %></p>
+
+
     <% for song in @post.songs %>
-      <li><%= song.title.html_safe %></li>
-        <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls"></audio>
+        <div style="padding-bottom: 10px; padding-top: 10px">
+          <h4 style="color: #000"> <%= song.title.html_safe %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
+        </div>
     <% end %>
+
+  </div>
     <div class="btn-group">
       <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
       <% if can? :edit, @posts %>
