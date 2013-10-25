@@ -44,7 +44,7 @@
                     <% if !user_signed_in? %>
                         <li><%= link_to "Sign up", new_user_registration_path %></li>
                     <% end %>
-                    <li><%= link_to "Contact Us" %></li>
+                    <li><%= mail_to "datmusicdoe@gmail.com", name= "Contact Us" %></li>
                     <% if can? :create, @posts %>
                        <li> <%= link_to 'New post', new_post_path %> </li>
                     <%end%>
