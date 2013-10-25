@@ -28,7 +28,7 @@
         <% end %>
         <div style="padding-top: 20px">
         <% if post.tags.any? %>
-            <% for tag in post.tag_list %>
+            <% for tag in post.tag_list.sort_by!{ |tag| tag.downcase } %>
                <span class="label"> <%= link_to tag, tag_path(tag),:class => "tag" %></span>
             <% end %>
         <%end%></div>
