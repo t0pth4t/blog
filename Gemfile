@@ -38,6 +38,7 @@ gem 'rich'
 gem 'formtastic'
 gem 'mediaelement_rails'
 gem 'google-analytics-rails'
+gem 'acts-as-taggable-on'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

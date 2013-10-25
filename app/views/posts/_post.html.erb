@@ -26,7 +26,12 @@
                     <h4 style="color: #000"> <%= song.title.html_safe %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
                </div>
         <% end %>
-
+        <div style="padding-top: 20px">
+        <% if post.tags.any? %>
+            <% for tag in post.tag_list %>
+               <span class="label"> <%= link_to tag, tag_path(tag),:class => "tag" %></span>
+            <% end %>
+        <%end%></div>
       </div>
 
       <div class=" btn-group">

@@ -93,4 +93,46 @@
 .edit-well{
   background-color: #696969;
 }
+#tag_cloud {
+  background: #1b1b1b;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #222, #111);
+  line-height: 1.6em;
+text-align: center;
+  .s {
+    font: normal 1.8em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+    color: #96D6DB;
+    letter-spacing: -2px;
+    text-transform: none;}
+  .m {   font: normal 2.2em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+    color: #B696C6;
+    letter-spacing: -2px;
+    text-transform: none; }
+  .l {   font: normal 3.8em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+    color: #D68177;
+    letter-spacing: -2px;
+    text-transform: none;}
+  .h{   font: normal 6.8em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+    color: #C7B069;
+    letter-spacing: -2px;
+    text-transform: none;}
+}
 
+.tag{
+  text-decoration:none !important;
+  font: normal 1.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif, bolder;
+  color:#FFF;
+  padding:10px
+}
+
+.label{
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  border-color: #252525;
+}
