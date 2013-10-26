@@ -19,12 +19,20 @@
 
       <div class="post-content">
         <p class="lead"><%= post.text.html_safe %></p>
+        <% if post.songs.any? %>
 
+            <ul id="<%= post.id %>" class="mejs-list">
+                <% for song in post.songs %>
 
+                 <li <% if post.songs.first == song %>class="current" <%end%>>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio></li>
+
+                <% end %>
+            </ul>
+         <%end%>
         <% for song in post.songs %>
-               <div style="padding-bottom: 10px; padding-top: 10px">
-                    <h4 style="color: #000"> <%= song.title.html_safe %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
-               </div>
+            <div style="padding-bottom: 10px; padding-top: 10px">
+              <h4 style="color: #000"> <%= song.title.html_safe %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
+            </div>
         <% end %>
         <div style="padding-top: 20px">
         <% if post.tags.any? %>
@@ -46,9 +54,5 @@
     </div>
 
     <script>
-        $('video,audio').mediaelementplayer(     {
-                features: ['playpause','progress','duration']
 
-                  }
-        )
     </script>
