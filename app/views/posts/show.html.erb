@@ -19,11 +19,19 @@
     <p class="lead"><%= @post.text.html_safe %></p>
 
 
-    <% for song in @post.songs %>
-        <div style="padding-bottom: 10px; padding-top: 10px">
-          <h4 style="color: #000"> <%= song.title.html_safe %></h4>  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
-        </div>
-    <% end %>
+    <% if @post.songs.any? %>
+
+        <ul id="<%= @post.id %>" class="mejs-list">
+          <% for song in @post.songs %>
+
+              <li <% if @post.songs.first == song %>class="current"  <%end%>>
+                <h4 class="song-title"> <%= song.title.html_safe %></h4>
+                <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
+              </li>
+
+          <% end %>
+        </ul>
+    <%end%>
     <div style="padding-top: 20px">
       <% if @post.tags.any? %>
           <% for tag in @post.tag_list.sort_by!{ |tag| tag.downcase } %>

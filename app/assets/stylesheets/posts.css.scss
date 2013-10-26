@@ -25,8 +25,9 @@
   border: none;
 }
 #main ul li {
-  list-style-image: url(bullet.gif);
+  list-style-type: none;
 }
+
 
 .postmeta {
   padding: 7px 5px; margin: 20px 10px 15px 10px;
@@ -136,3 +137,9 @@ text-align: center;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
   border-color: #252525;
 }
+
+.song-title{
+  color: #000;
+}
+
+

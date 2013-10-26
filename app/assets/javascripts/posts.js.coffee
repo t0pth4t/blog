@@ -7,7 +7,18 @@ jQuery ->
       url = $('.pagination .next_page').attr('href')
       if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
         $('.pagination').text("Loading more posts...")
-        $.getScript(url)
+        $.getScript url, ->
+                            $("video,audio").mediaelementplayer
+                              features: ["playpause", "progress", "duration"]
+                              success: (mediaElement, domObject) ->
+                                mediaElement.addEventListener "ended", ((e) ->
+                                  mejsPlayNext $(this).closest("ul")
+                                ), false
+                                mediaElement.addEventListener "play", ((e) ->
+                                  mejsPlay $(this).closest("li")
+                                ), false
+
+
 
     $(window).scroll()
 
@@ -22,7 +33,7 @@ mejsPlayNext = (currentList) ->
         current_item = currentList.find(" li:first")
         $(current_item).addClass("current").siblings().removeClass "current"
       else
-        current_item.next().find("audio#audio-player")[0].player.play()
+        current_item.next().find("audio#audio-player").get(0).player.play();
 
 mejsPlay = (currentItem) ->
   $(currentItem).addClass("current").siblings().removeClass "current"  unless $(currentItem).hasClass("current")
