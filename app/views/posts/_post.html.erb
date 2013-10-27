@@ -25,7 +25,7 @@
                 <% for song in post.songs %>
 
                   <li <% if post.songs.first == song %>class="current"  <%end%>>
-                    <h4 class="song-title"> <%= song.title.html_safe %></h4>
+                    <h4 id="<%= song.id %>" class="song-title"> <%= song.title.html_safe %></h4>
                     <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
                   </li>
 
