@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55ed6fdd-e296-4d23-8c1a-2054492f29db" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_featured.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_featured.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,12 +126,12 @@
       <file leaf-file-name="_featured.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/posts/_featured.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.039580908">
+            <state line="53" column="9" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.9010477">
               <folding>
-                <element signature="n#style#0;n#h2#0;n#header#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h2#0;n#header#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#105#146#0" expanded="true" />
+                <element signature="e#153#343#0" expanded="true" />
+                <element signature="e#1023#1053#0" expanded="true" />
+                <element signature="e#1515#1540#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -948,12 +947,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/_featured.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.039580908">
+        <state line="53" column="9" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.9010477">
           <folding>
-            <element signature="n#style#0;n#h2#0;n#header#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#header#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#105#146#0" expanded="true" />
+            <element signature="e#153#343#0" expanded="true" />
+            <element signature="e#1023#1053#0" expanded="true" />
+            <element signature="e#1515#1540#0" expanded="true" />
           </folding>
         </state>
       </provider>
