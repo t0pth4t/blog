@@ -1,10 +1,9 @@
+<% if featured %>
 <div class="well jumbotron">
 
-  <h1 style="color: #000; font: normal 4.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif, bolder; text-shadow: 1px 1px 6px #ff3300;
-          filter: dropshadow(color=#ff3300, offx=1, offy=1); text-align: center">#feature</h1>
-  <% if featured %>
       <header id="main">
-        <h2  class="post-title" style=" text-shadow: 1px 1px 6px #303030"><%= link_to featured.title, post_path(featured) %></h2>
+        <h2  class="post-title" style=" text-shadow: 1px 1px 6px #303030"><span style="color: #000; font:  'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif, bolder; text-shadow: 1px 1px 6px #ff3300;
+                filter: dropshadow(color=#ff3300, offx=1, offy=1);">Feature -</span> <%= link_to featured.title, post_path(featured) %></h2>
       </header>
 
       <div class="post-info">
@@ -23,7 +22,7 @@
         <p class="lead"><%= featured.text.html_safe %></p>
         <% if featured.songs.any? %>
 
-            <ul id="<%= featured.id %>" class="mejs-list">
+            <ul id="<%= featured.id %>" class="mejs-list" style="list-style-type: none;">
               <% for song in featured.songs %>
 
                   <li <% if featured.songs.first == song %>class="current"  <%end%>>
