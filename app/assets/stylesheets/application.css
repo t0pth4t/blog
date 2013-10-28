@@ -56,20 +56,20 @@ footer a:hover {
     width:15.97%;
 }
 
-@media (max-width: 767px) {
+@amedia (max-width: 767px) {
     .sidebar-nav-fixed {
         position:static;
         width:auto;
     }
 }
 
-@media (max-width: 979px) {
+@amedia (max-width: 979px) {
     .sidebar-nav-fixed {
         top:70px;
     }
 }
 
-.firstad { width: 320px; height: 50px; }
-@media(min-width: 500px) { .firstad { width: 468px; height: 60px; } }
-@media(min-width: 800px) { .firstad { width: 728px; height: 90px; } }
+.firstad { height: 50px; }
+@media(max-width: 100px) { .firstad { width: auto; height: 60px; } }
+@media(max-width: 100px) { .firstad { width: auto; height: 90px; } }
 
