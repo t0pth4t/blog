@@ -69,3 +69,7 @@ footer a:hover {
     }
 }
 
+.firstad { width: 320px; height: 50px; }
+@media(min-width: 500px) { .firstad { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .firstad { width: 728px; height: 90px; } }
+

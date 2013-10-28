@@ -7,6 +7,7 @@
       <![endif]-->
       <%= stylesheet_link_tag    "application", :media => "all" %>
       <%= javascript_include_tag "application" %>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <%= csrf_meta_tags %>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <%= favicon_link_tag 'favicon.ico' %>
@@ -84,21 +85,20 @@
         <div class="span8 offset2">
           <%= yield %>
         </div>
-        <div class="span3">
+        <div class="span1 ">
           <section >
 
 
-            <div style="display: none" class="well sidebar-nav sidebar-nav-fixed" >
-              <h2>social</h2>
-              <ul class="nav nav-pills nav-stacked">
-                <li><a href="http://delicious.com/" rel="me">delicious</a></li>
-                <li><a href="http://digg.com/" rel="me">digg</a></li>
-                <li><a href="http://facebook.com/" rel="me">facebook</a></li>
-                <li><a href="http://www.last.fm/" rel="me">last.fm</a></li>
-                <li><a href="http://website.com/feed/" rel="alternate">rss</a></li>
-                <li><a href="http://twitter.com/" rel="me">twitter</a></li>
-              </ul>
-            </div><!-- /.social -->
+
+              <!-- firstad -->
+              <ins class="adsbygoogle firstad"
+                   style="display:inline-block"
+                   data-ad-client="ca-pub-1486063319063063"
+                   data-ad-slot="9141425034"></ins>
+              <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
           </section><!-- /#extras -->
         </div>
       </div>
@@ -108,33 +108,20 @@
     </div>
     <footer class="navbar navbar-inverse">
       <div class="container">
-        <p class="muted credit">      <address >
-            <span >
-                <strong><a href="#">Dat music doe.</a></strong>
+        <p class="muted credit">
+            <address >
+                    <span >
+                        <strong><a href="#">Dat music doe.</a></strong>
 
-                <span>SwagSwag</span>
-            </span><!-- /.primary -->
+                        <span>SwagSwag</span>
+                    </span><!-- /.primary -->
 
-        <%= image_tag("tybg.png", :alt => "Thank you BG") %>
-        <span >Dat music doe. Thank you Based God!</span>
+                <%= image_tag("tybg.png", :alt => "Thank you BG") %>
+                <span >Dat music doe. Thank you Based God!</span>
 
-      </address><!-- /#about -->
+            </address><!-- /#about -->
         <p>2013 <a href="http://www.datmusicdoe.com">Dat music doe.</a></p></p>
       </div>
     </footer>
     </body>
 </html>
-
-<script>
-    !function ($) {
-        $(function(){
-            // Fix for dropdowns on mobile devices
-            $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) {
-                e.stopPropagation();
-            });
-            $(document).on('click','.dropdown-menu a',function(){
-                document.location = $(this).attr('href');
-            });
-        })
-    }(window.jQuery)
-</script>
