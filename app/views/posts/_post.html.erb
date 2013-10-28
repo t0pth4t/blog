@@ -1,8 +1,9 @@
-
+      <% if @featured != post %>
     <div class="well post-body" id="main">
 
       <header>
-        <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
+        <h2 class="post-title" style="text-shadow: 1px 1px 6px #303030;
+                filter: dropshadow(color=#303030, offx=1, offy=1);"><%= link_to post.title, post_path(post) %></h2>
       </header>
 
       <div class="post-info">
@@ -50,3 +51,4 @@
       </div>
       <span style="font: normal 1.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif; float: right"><%= link_to "Comments #{post.comments.count}", post_path(post, anchor: "comments") %></span>
     </div>
+      <% end %>

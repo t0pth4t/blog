@@ -1,0 +1,54 @@
+<div class="well jumbotron">
+
+  <h1 style="color: #000; font: normal 4.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif, bolder; text-shadow: 1px 1px 6px #ff3300;
+          filter: dropshadow(color=#ff3300, offx=1, offy=1); text-align: center">#feature</h1>
+  <% if featured %>
+      <header id="main">
+        <h2  class="post-title" style=" text-shadow: 1px 1px 6px #303030"><%= link_to featured.title, post_path(featured) %></h2>
+      </header>
+
+      <div class="post-info">
+        <%= featured.created_at.strftime('%A, %b %d') %>
+        By <a class="url fn" href="#">
+        <%if(featured.user_id) %>
+            <%=User.find(featured.user_id).email.partition('@').first%>
+        <% end %></a>
+      </div><!-- /.post-info -->
+
+      <% if featured.image %>
+          <%= image_tag(featured.image, :class => "post-image")%>
+      <% end %>
+
+      <div class="post-content">
+        <p class="lead"><%= featured.text.html_safe %></p>
+        <% if featured.songs.any? %>
+
+            <ul id="<%= featured.id %>" class="mejs-list">
+              <% for song in featured.songs %>
+
+                  <li <% if featured.songs.first == song %>class="current"  <%end%>>
+                    <h4 id="<%= song.id %>" class="song-title"> <%= song.title.html_safe %></h4>
+                    <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
+                  </li>
+
+              <% end %>
+            </ul>
+        <%end%>
+        <div style="padding-top: 20px">
+          <% if featured.tags.any? %>
+              <% for tag in featured.tag_list.sort_by!{ |tag| tag.downcase } %>
+                  <span class="label"> <%= link_to tag, tag_path(tag),:class => "tag" %></span>
+              <% end %>
+          <%end%></div>
+      </div>
+
+      <div class=" btn-group">
+        <% if can? :destroy, featured %>
+            <%= link_to 'Delete', post_path(featured), method: :delete, data: {confirm: 'Are you sure?'},:class=>"btn btn-danger" %>
+        <% end %>
+        <% if can? :edit, featured %>
+            <%= link_to 'Edit', edit_post_path(featured), :class=>"btn btn-success" %>
+        <% end %>
+  <% end %>
+  </div>
+</div>

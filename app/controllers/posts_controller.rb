@@ -6,6 +6,7 @@ load_and_authorize_resource
     else
       @posts = Post.paginate(:page=>params[:page], :per_page =>5).order('created_at DESC')
     end
+    @featured = Post.tagged_with("#featured").order("created_at DESC").first()
   end
 
   def new
