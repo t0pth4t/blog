@@ -56,18 +56,7 @@ footer a:hover {
     width:15.97%;
 }
 
-@amedia (max-width: 767px) {
-    .sidebar-nav-fixed {
-        position:static;
-        width:auto;
-    }
-}
 
-@amedia (max-width: 979px) {
-    .sidebar-nav-fixed {
-        top:70px;
-    }
-}
 
 .firstad { height: 50px; }
 @media(max-width: 100px) { .firstad { width: auto; height: 60px; } }
