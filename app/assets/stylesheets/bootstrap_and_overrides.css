@@ -6,10 +6,11 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-body { padding-top: 60px;
+body {
     background-color: #666;
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav>li>a   {
     font-weight: bolder;
 }
+
