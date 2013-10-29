@@ -49,14 +49,24 @@ footer a:hover {
     float: left;
 }
 
-
 .sidebar-nav-fixed {
     position:fixed;
-    top:300px;
-    width:15.97%;
+    padding-top:60px;
+
 }
 
+@media (max-width: 767px) {
+    .sidebar-nav-fixed {
+        width:auto;
+    }
+}
 
+@media (max-width: 979px) {
+    .sidebar-nav-fixed {
+        position:static;
+        width: auto;
+    }
+}
 
 .firstad { height: 50px; }
 @media(max-width: 100px) { .firstad { width: auto; height: 60px; } }
