@@ -1,9 +1,13 @@
-<%= render partial: "featured", object: @featured %>
+
 
 <% if @tag %>
-    <div class="well" style="padding: 0 0 0 0"><h1 style="letter-spacing: -2px; font: normal 4.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif; color: #000000 ;text-align:
-            center; text-shadow: 1px 1px 6px #646662;"><span ><%= @tag %></span> </h1></div>
+    <div class="well" style="padding: 0 0 0 0"><div id="tag-header"><h1><%= @tag %> </h1></div></div>
+    <% if @tag == "#featured" %>
+        <%= render partial: "featured", object: @featured %>
     <% end %>
+<% else %>
+        <%= render partial: "featured", object: @featured %>
+ <% end %>
  <div id="posts">
    <%= render @posts %>
  </div>

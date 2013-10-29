@@ -24,6 +24,10 @@
   list-style-type: none;
 }
 
+#tag-header h1 {
+  letter-spacing: -2px; font: normal 4.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif; color: #000000 ;text-align:
+  center; text-shadow: 1px 1px 6px #646662;
+}
 
 .postmeta {
   padding: 7px 5px; margin: 20px 10px 15px 10px;
@@ -39,7 +43,15 @@
 
 .postmeta a.readmore { margin: 0 10px 0 5px;	}
 
+ .feature-title{
+   color: #000; font:  'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif, bolder; text-shadow: 1px 1px 6px #ff3300;
+   filter: dropshadow(color=#ff3300, offx=1, offy=1);
+ }
 
+ .post-title{
+   text-shadow: 1px 1px 6px #303030;
+   filter: dropshadow(color=#303030, offx=1, offy=1);
+ }
 .post-info { font-size: .95em; padding-bottom: 10px; margin-left: 5px; color: #666; font-weight: bold; font-style: italic	}
 .post-info a { color: #BD4200; }
 .post-image {max-height: 400px}
@@ -136,6 +148,10 @@ text-align: center;
 
 .song-title{
   color: #000;
+}
+
+.comment-link{
+  font: normal 1.5em 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif; float: right
 }
 
 
