@@ -77,7 +77,6 @@ footer a:hover {
     position: relative;
     height:410px;
     width: 410px;
-
     overflow:hidden;
     right:50px;
     font-family: Arial, Helvetica, sans-serif;
@@ -98,7 +97,7 @@ footer a:hover {
     padding-right:10px;
     margin-top:2px;
     z-index: 8;
-    position: absolute;
+    position: relative;
     background: #2183c4;
     background:
         -webkit-gradient(
@@ -124,19 +123,50 @@ footer a:hover {
     box-shadow:1px 1px 5px #000;
 }
 
+
+.slidingMenu li a:hover {
+    background: #4e4e4e;
+    background:
+        -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#4e4e4e),
+            to(#646662)
+        );
+    background:
+        -moz-linear-gradient(
+            top, #4e4e4e, #646662
+        );
+    -moz-border-radius: 8px 0px 0px 8px;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -moz-box-shadow:1px 1px 5px #000;
+    -webkit-box-shadow:1px 1px 5px #000;
+    box-shadow:1px 1px 5px #000;
+}
+
 .slidingMenu li a {
     font-size:40px;
+
     text-decoration: none;
     color: #ddd;
     outline: none;
     text-indent:-2px;
     z-index: 10;
     display: block;
-    float: right;
+    float: left;
     height: 66px;
     line-height: 66px;
     position: relative;
     overflow: hidden;
+           padding-right: 10px;
+    padding-left:10px;
+    transition: margin-left ease-in-out 500ms;
+    -webkit-transition: margin-left ease-in-out 500ms;
+    -moz-transition: margin-left ease-in-out 500ms;
 }
 
 .span6{
