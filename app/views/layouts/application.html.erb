@@ -51,7 +51,7 @@
                 <p class="navbar-text pull-right"> <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %> |
                   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>     </p>
             <% else %>
-                <div class="navbar-form navbar-left" role="search">
+                <div class="navbar-form pull-right" role="search">
                   <div class="form-group">
                     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
                         <%= f.text_field :email ,:placeholder =>"Email"%>
@@ -66,12 +66,13 @@
         </div>
       </div>
     </div>
+
     <div class="wrapper">
-        <div class="container">
+        <div class="container-fluid">
 
 
 
-      <div class="row">
+      <div class="row-fluid">
         <div class="span12">
           <% if notice %>
               <p class="alert alert-notice"><%= notice %></p>
@@ -82,14 +83,22 @@
         </div>
 
 
-        <div class="span8 offset2">
+        <div class="span2">
+          <div class="sidebar-nav-fixed">
+            <ul id="slidingMenu" class="slidingMenu">
+              <li><a href="/tags/%23mixtape">Mixtapes</a></li>
+              <li><a href="/tags/%23playlist">Playlists</a></li>
+              <li><a href="/tags/%23throwback">Throwbacks</a></li>
+              <li><a href="/tags/%23banger">Bangers</a> </li>
+              <li><a href="/tags/%23chill">Chill</a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span6 offset1">
           <%= yield %>
         </div>
         <div class="span1 ">
           <section >
-
-
-
               <!-- firstad -->
               <ins class="adsbygoogle firstad"
                    style="display:inline-block"
