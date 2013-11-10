@@ -38,33 +38,46 @@
                   <li><a href="/tags/%23chill">Chill</a> </li>
                 </ul>
               </li>
+              <li><%= mail_to "datmusicdoe@gmail.com", name= "Contact Us" %></li>
               <% if !user_signed_in? %>
                   <li><%= link_to "Sign up", new_user_registration_path %></li>
+                  <li><a href="#myModal" role="button" class="" data-toggle="modal">Sign In</a></li>
+              <% else %>
+                  <li><%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>  </li>
               <% end %>
-              <li><%= mail_to "datmusicdoe@gmail.com", name= "Contact Us" %></li>
+           
               <% if can? :create, @posts %>
                   <li> <%= link_to 'New post', new_post_path %> </li>
               <%end%>
             </ul>
-            <% if user_signed_in? %>
-                <p class="navbar-text pull-right"> <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %> |
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>     </p>
-              <% else %>
-                <div class="navbar-form pull-right" role="search">
-                  <div class="form-group">
-                    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-                        <%= f.text_field :email ,:placeholder =>"Email"%>
-                        <%= f.password_field :password, :placeholder =>"Password" %>
-                        <%= f.submit 'Sign in',:class=>"btn btn-primary" %>
-                    <% end %>
-                  </div>
-                </div>
+            <%= form_tag posts_path,:class=>"navbar-form", :method => 'get', :id => "posts_search" do %>
+                <p>
+                  <%= text_field_tag :search, params[:search] %>
+                  <%= submit_tag "Search", :name => nil,:class=>"btn btn-primary" %>
+                </p>
             <% end %>
           </div>
         </div>
       </div>
     </div>
-
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Sign In</h3>
+  </div>
+                <div class="form-group">
+                    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                        <%= f.text_field :email ,:placeholder =>"Email"%>
+                        <%= f.password_field :password, :placeholder =>"Password" %>
+ 
+                  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                           <%= f.submit 'Sign in',:class=>"btn btn-primary" %>
+                    <% end %>
+  </div>
+</div>
     <div class="wrapper">
         <div class="container-fluid">
 

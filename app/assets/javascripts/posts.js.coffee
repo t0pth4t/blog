@@ -54,6 +54,10 @@ mejsPause = (currentItem) ->
 
 
 $(document).ready ->
+  $("#posts_search input").keyup ->
+    $.get $("#posts_search").attr("action"), $("#posts_search").serialize(), null, "script"
+    false
+    
   $("video,audio").mediaelementplayer
     features: ["playpause", "progress", "duration"]
     success: (mediaElement, domObject) ->

@@ -7,4 +7,12 @@ class Post < ActiveRecord::Base
   validates :title, presence: true,
                     length: {minimum: 5}
   acts_as_taggable_on :tags
+
+	def self.search(search)
+		  if search
+		    where('title LIKE ?', "%#{search}%")
+		  else
+		    scoped
+		  end
+	end
 end

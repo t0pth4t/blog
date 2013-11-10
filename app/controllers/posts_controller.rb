@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
 load_and_authorize_resource
   def index
-    if params[:tag]
+    if params[:search]
+      @search = params[:search]
+      @posts = Post.search(params[:search]).order("created_at DESC").paginate(:per_page => 5, :page => params[:page])
+    elsif params[:tag]
       @posts = Post.paginate(:page=>params[:page], :per_page =>5).order('created_at DESC').tagged_with(params[:tag])
       @tag = params[:tag]
     else

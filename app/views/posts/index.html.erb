@@ -1,15 +1,15 @@
-
 <% if @tag %>
     <div class="well" style="padding: 0 0 0 0"><div id="tag-header"><h1><%= @tag %> </h1></div></div>
     <% if @tag == "#featured" %>
         <%= render partial: "featured", object: @featured %>
     <% end %>
-<% else %>
+<% elsif !@search %>
         <%= render partial: "featured", object: @featured %>
- <% end %>
- <div id="posts">
+<% end %>
+
+<div id="posts">
    <%= render @posts %>
- </div>
+</div>
 
  <%= will_paginate @posts %>
 
