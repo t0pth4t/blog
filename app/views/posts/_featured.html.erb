@@ -2,7 +2,7 @@
 <div class="well jumbotron">
 
       <header id="main">
-        <h2  class="post-title feature-title"><span class="feature-title">Feature -</span> <%= link_to featured.title, post_path(featured) %></h2>
+        <h2  class="post-title feature-title"><%= link_to featured.title, post_path(featured), :class => "feature-title" %></h2>
       </header>
 
       <div class="post-info">
