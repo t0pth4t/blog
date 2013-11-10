@@ -17,6 +17,9 @@ jQuery ->
                                 mediaElement.addEventListener "play", ((e) ->
                                   mejsPlay $(this).closest("li")
                                 ), false
+                                mediaElement.addEventListener "pause", ((e) ->
+                                  mejsPause $(this)
+                                ), false
 
 
 
@@ -36,7 +39,18 @@ mejsPlayNext = (currentList) ->
         current_item.next().find("audio#audio-player").get(0).player.play();
 
 mejsPlay = (currentItem) ->
+  playIcon = '\u25B6 '
+  startsWithIcon = document.title.substring(0, playIcon.length) is playIcon
+  document.title = playIcon + document.title  if not startsWithIcon
+
   $(currentItem).addClass("current").siblings().removeClass "current"  unless $(currentItem).hasClass("current")
+
+mejsPause = (currentItem) ->
+  playIcon = '\u25B6 '
+  startsWithIcon = document.title.substring(0, playIcon.length) is playIcon
+  if startsWithIcon
+    document.title = document.title.slice(playIcon.length)
+
 
 
 $(document).ready ->
@@ -48,6 +62,9 @@ $(document).ready ->
       ), false
       mediaElement.addEventListener "play", ((e) ->
         mejsPlay $(this).closest("li")
+      ), false
+      mediaElement.addEventListener "pause", ((e) ->
+        mejsPause $(this)
       ), false
 
 

@@ -3,62 +3,61 @@
 <div class="well post-body" id="main">
 
 
-<h2 class="post-title"><%= @post.title %></h2>
+  <h2 class="post-title"><%= @post.title %></h2>
 
-  <div class="post-info">
-    <%= @post.created_at.strftime('%A, %b %d') %>
-    By <a class="url fn" href="#">
-    <%if(@post.user_id) %>
-        <%=User.find(@post.user_id).email.partition('@').first%>
-    <% end %></a>
-  </div><!-- /.post-info -->
-   <% if @post.image %>
-    <%= image_tag(@post.image, :class => "post-image")%>
-   <% end %>
-  <div class="post-content">
-    <p class="lead"><%= @post.text.html_safe %></p>
+    <div class="post-info">
+      <%= @post.created_at.strftime('%A, %b %d') %>
+      By <a class="url fn" href="#">
+      <%if(@post.user_id) %>
+          <%=User.find(@post.user_id).email.partition('@').first%>
+      <% end %></a>
+    </div><!-- /.post-info -->
+     <% if @post.image %>
+      <%= image_tag(@post.image, :class => "post-image")%>
+     <% end %>
+    <div class="post-content">
+      <p class="lead"><%= @post.text.html_safe %></p>
+      
+      <% if @post.songs.any? %>
 
+          <ul id="<%= @post.id %>" class="mejs-list">
+            <% for song in @post.songs %>
 
-    <% if @post.songs.any? %>
+                <li <% if @post.songs.first == song %>class="current"  <%end%>>
+                  <h4 class="song-title"> <%= song.title.html_safe %></h4>
+                  <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
+                </li>
 
-        <ul id="<%= @post.id %>" class="mejs-list">
-          <% for song in @post.songs %>
-
-              <li <% if @post.songs.first == song %>class="current"  <%end%>>
-                <h4 class="song-title"> <%= song.title.html_safe %></h4>
-                <audio id="audio-player" src="<%= song.source %>" type="audio/mp3" controls="controls" preload="none">   </audio>
-              </li>
-
-          <% end %>
-        </ul>
-    <%end%>
-    <div style="padding-top: 20px">
-      <% if @post.tags.any? %>
-          <% for tag in @post.tag_list.sort_by!{ |tag| tag.downcase } %>
-              <span class="label"> <%= link_to tag, tag_path(tag),:class => "tag" %></span>
-          <% end %>
-      <%end%></div>
-  </div>
-    <div class="btn-group">
-      <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
-      <% if can? :edit, @posts %>
-           <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-inverse" %>
-      <% end %>
+            <% end %>
+          </ul>
+      <%end%>
+      <div style="padding-top: 20px">
+        <% if @post.tags.any? %>
+            <% for tag in @post.tag_list.sort_by!{ |tag| tag.downcase } %>
+                <span class="label"> <%= link_to tag, tag_path(tag),:class => "tag" %></span>
+            <% end %>
+        <%end%></div>
     </div>
-  </p>
+      <div class="btn-group">
+        <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
+        <% if can? :edit, @posts %>
+             <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-inverse" %>
+        <% end %>
+      </div>
+    </p>
 
 </div>
 
  <div class="well">
-   <h2><a name="comments"></a>Comments</h2>
-   <%= render @post.comments %>
+     <h2><a name="comments"></a>Comments</h2>
+     <%= render @post.comments %>
 
-   <button type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#comments-form">
-     Add a comment
-   </button>
-  <div id="comments-form" class="collapse" style="padding-top: 10px">
-    <%= render "comments/form" %>
-  </div>
+     <button type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#comments-form">
+       Add a comment
+     </button>
+      <div id="comments-form" class="collapse" style="padding-top: 10px">
+        <%= render "comments/form" %>
+      </div>
 
  </div>
 
