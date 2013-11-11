@@ -57,7 +57,7 @@ $(document).ready ->
   $("#posts_search input").keyup ->
     $.get $("#posts_search").attr("action"), $("#posts_search").serialize(), null, "script"
     false
-    
+
   $("video,audio").mediaelementplayer
     features: ["playpause", "progress", "duration"]
     success: (mediaElement, domObject) ->
@@ -70,5 +70,21 @@ $(document).ready ->
       mediaElement.addEventListener "pause", ((e) ->
         mejsPause $(this)
       ), false
+
+  offset = 220
+  duration = 500
+  jQuery(window).scroll ->
+    if jQuery(this).scrollTop() > offset
+      jQuery(".back-to-top").fadeIn duration
+    else
+      jQuery(".back-to-top").fadeOut duration
+
+  jQuery(".back-to-top").click (event) ->
+    event.preventDefault()
+    jQuery("html, body").animate
+      scrollTop: 0
+    , duration
+    false
+  
 
 
