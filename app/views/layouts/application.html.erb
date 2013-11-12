@@ -16,6 +16,7 @@
 
     <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
+      <%= link_to image_tag("bird_gray_32.png",:class=>"pull-right hidden-phone hidden-tablet", :alt => "DatMusicDoe", :style => "width:18px;height:18px;padding-right:20px;padding-top:10px"), "https://twitter.com/datmusicdo3", :target=>"_blank" %>
       <%= link_to image_tag("logo.jpg", :alt => "DatMusicDoe", :id=>"logo"), posts_path %>
       <div class="navbar-inner">
         <div class="container">
@@ -51,15 +52,19 @@
                   <li> <%= link_to 'New post', new_post_path %> </li>
               <%end%>
             </ul>
+              <li class="hidden-desktop">      <%= link_to image_tag("bird_gray_32.png",:class=>"", :alt => "DatMusicDoe", :style => "width:18px;height:18px;padding-left:10px"), "https://twitter.com/datmusicdo3", :target=>"_blank" %></li>
             <%= form_tag posts_path,:class=>"navbar-form", :method => 'get', :id => "posts_search" do %>
                 <p>
                   <%= text_field_tag :search, params[:search] %>
                   <%= submit_tag "Search", :name => nil,:class=>"btn btn-primary" %>
                 </p>
             <% end %>
+
           </div>
         </div>
+
       </div>
+
     </div>
 
   <div id="signInModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
