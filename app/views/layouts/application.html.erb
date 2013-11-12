@@ -16,7 +16,7 @@
 
     <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <%= link_to image_tag("bird_gray_32.png",:class=>"pull-right hidden-phone hidden-tablet", :alt => "DatMusicDoe", :style => "width:18px;height:18px;padding-right:20px;padding-top:10px"), "https://twitter.com/datmusicdo3", :target=>"_blank" %>
+      <%= link_to image_tag("bird_gray_32.png",:class=>"header-twitter pull-right hidden-phone hidden-tablet", :alt => "DatMusicDoe"), "https://twitter.com/datmusicdo3", :target=>"_blank" %>
       <%= link_to image_tag("logo.jpg", :alt => "DatMusicDoe", :id=>"logo"), posts_path %>
       <div class="navbar-inner">
         <div class="container">
@@ -32,11 +32,12 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="/tags/%23mixtape">Mixtapes</a></li>
-                  <li><a href="/tags/%23playlist">Playlists</a></li>
-                  <li><a href="/tags/%23throwback">Throwbacks</a></li>
-                  <li><a href="/tags/%23banger">Bangers</a> </li>
-                  <li><a href="/tags/%23chill">Chill</a> </li>
+              <li><a id="leftmenu-first" href="/tags/$23featured">Featured</a></li>
+              <li><a id="leftmenu-second" href="/tags/%23mixtape">Mixtapes</a></li>
+              <li><a id="leftmenu-third" href="/tags/%23playlist">Playlists</a></li>
+              <li><a id="leftmenu-fourth" href="/tags/%23throwback">Throwbacks</a></li>
+              <li><a id="leftmenu-fifth" href="/tags/%23banger">Bangers</a> </li>
+              <li><a id="leftmenu-sixth" href="/tags/%23chill">Chill</a> </li>
                 </ul>
               </li>
               <li><%= mail_to "datmusicdoe@gmail.com", name= "Contact Us" %></li>
@@ -52,7 +53,7 @@
                   <li> <%= link_to 'New post', new_post_path %> </li>
               <%end%>
             </ul>
-              <li class="hidden-desktop">      <%= link_to image_tag("bird_gray_32.png",:class=>"", :alt => "DatMusicDoe", :style => "width:18px;height:18px;padding-left:10px"), "https://twitter.com/datmusicdo3", :target=>"_blank" %></li>
+              <li class="hidden-desktop">      <%= link_to image_tag("bird_gray_32.png",:class=>"menu-twitter", :alt => "DatMusicDoe"), "https://twitter.com/datmusicdo3", :target=>"_blank" %></li>
             <%= form_tag posts_path,:class=>"navbar-form", :method => 'get', :id => "posts_search" do %>
                 <p>
                   <%= text_field_tag :search, params[:search] %>
@@ -105,11 +106,12 @@
         <div class="span2 hidden-phone">
           <div class="sidebar-nav-fixed">
             <ul id="slidingMenu" class="slidingMenu">
-              <li><a href="/tags/%23mixtape">Mixtapes</a></li>
-              <li><a href="/tags/%23playlist">Playlists</a></li>
-              <li><a href="/tags/%23throwback">Throwbacks</a></li>
-              <li><a href="/tags/%23banger">Bangers</a> </li>
-              <li><a href="/tags/%23chill">Chill</a> </li>
+              <li><a id="leftmenu-first" href="/tags/$23featured">Featured</a></li>
+              <li><a id="leftmenu-second" href="/tags/%23mixtape">Mixtapes</a></li>
+              <li><a id="leftmenu-third" href="/tags/%23playlist">Playlists</a></li>
+              <li><a id="leftmenu-fourth" href="/tags/%23throwback">Throwbacks</a></li>
+              <li><a id="leftmenu-fifth" href="/tags/%23banger">Bangers</a> </li>
+              <li><a id="leftmenu-sixth" href="/tags/%23chill">Chill</a> </li>
             </ul>
           </div>
         </div>
@@ -134,7 +136,7 @@
       </div>
 
     </div>
-    <a href="#" class="back-to-top">Back To Top <%=image_tag("up-icon.png", :style=>"height:18px;width:18px;padding-bottom:2px;") %></a>
+    <a href="#" class="back-to-top">Back To Top <%=image_tag("up-icon.png", :class=>"up-icon") %></a>
     <footer class="navbar navbar-inverse">
       <div class="container">
         <p class="muted credit">
