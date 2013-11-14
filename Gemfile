@@ -12,6 +12,8 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
+  gem 'dalli'
+  gem 'memcachier'
 end
 # Gems used only for assets and not required
 # in production environments by default.
@@ -41,6 +43,7 @@ gem 'mediaelement_rails'
 gem 'google-analytics-rails'
 gem 'acts-as-taggable-on'
 gem 'newrelic_rpm'
+
 
 
 # To use ActiveModel has_secure_password
