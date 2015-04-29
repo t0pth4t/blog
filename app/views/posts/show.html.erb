@@ -52,9 +52,7 @@
      <h2><a name="comments"></a>Comments</h2>
      <%= render @post.comments %>
 
-     <button type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#comments-form">
-       Add a comment
-     </button>
+
       <div id="comments-form" class="collapse" style="padding-top: 10px">
         <%= render "comments/form" %>
       </div>
